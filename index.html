@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+
+
+
+    <body>
+s
+        <script>
+          
+          
+            function getComputerChoice()
+            {  
+            let randomNumber=Math.floor(Math.random()*3);
+                if (randomNumber==0)
+                
+                    return "Rock";
+                    else{
+                    if (randomNumber==1)
+                    return "Paper";
+
+                    else
+                    return "Scissors";}
+            }
+                let result="";
+            const playerSelection="rock";
+
+            function playRound(playerSelection, computerSelection) 
+            {
+ 
+                if((computerSelection=="Paper" && playerSelection.toUpperCase()=="ROCK" ) || (computerSelection=="Scissors" && playerSelection.toUpperCase()=="PAPER")|| (computerSelection=="Rock" && playerSelection.toUpperCase()=="SCISSORS"))
+                    
+                    return "You lose this one";
+                    else
+                    return "You win this one";
+                
+                
+            }
+            let win=0;
+            let lose=0;
+
+            for(let i=1;i<=5;i++)
+        {
+            const playerSelection=prompt("Let's play a game! Rock,paper or scissors?","rock");
+            getComputerChoice();
+            const computerSelection = getComputerChoice();
+
+           let result = playRound(playerSelection, computerSelection);
+          alert(result);
+            if(result=="You win this one")
+                win++;
+                
+                else
+                
+                lose++;
+                
+
+            console.log(win);
+            console.log(lose);
+
+
+        console.log(playerSelection);
+         console.log(computerSelection);
+            
+        }
+        if(win>lose)
+        
+            alert("Not bad...Not bad at all");
+            else
+            {
+            alert("I won hahahahaha!Loser!");
+        }
+        
+       
+        
+        
+        
+
+        </script>
+
+
+    </body>
+
+</html>
